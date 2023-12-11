@@ -1,0 +1,59 @@
+1. Приведите десять типовых бизнес-процессов для предметной области ВИДЕО-ХОСТИНГ (Youtube), а также их соответствие по CRUD
+a) Create Account - CREATE
+b) Upload new video - CREATE
+c) Watch video - READ
+d) Offer video recommendations - UPDATE
+e) Calculate views - UPDATE
+f) Block users - UPDATE
+g) View comments - READ
+h) Place ads - UPDATE (based on target audience demographics) / READ (when viewed)
+i) Offer content owners royalty for ads or offer subscriptions - CREATE / UPDATE
+j) Delete views history after 10 years - DELETE
+
+
+2. Вывести название и стоимость товаров от 20 до 150 EUR 
+SELECT 
+   ProductName,
+   Price
+FROM Products
+   WHERE
+   Price >= 20 
+   AND
+   Price <= 150
+
+
+3. Вывести страны поставщиков, кроме тех, что из USA.
+SELECT 
+   SupplierName,
+   Country
+FROM Suppliers
+WHERE 
+   NOT Country = 'USA'
+
+
+4. Вывести перевозчика с ID 1
+SELECT * 
+FROM Shippers
+WHERE 
+   ShipperID = 1
+
+
+5. Вывести контактные имена клиентов, кроме тех, что из France и USA.
+SELECT ContactName
+FROM Customers
+WHERE 
+   NOT Country = 'France'
+   AND
+   NOT Country = 'USA'
+
+
+6. Вывести страну, город и адрес всех поставщиков, кроме тех, что из Japan и Brazil
+SELECT 
+   Country,
+   City,
+   Address
+FROM Suppliers
+WHERE 
+   NOT Country = 'Brazil'
+   AND
+   NOT Country = 'Japan'
